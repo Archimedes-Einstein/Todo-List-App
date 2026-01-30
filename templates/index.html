@@ -1,19 +1,235 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="container hero-section bg-white shadow">
-    <img class="hero-img"
-         src="https://plus.unsplash.com/premium_vector-1682303106170-390046c6f7d6?q=80&w=844&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dayone</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-header">
+          <a href="#">Day one</a>
+        </div>
+        <!-- <div class="toggle-collaspe"> -->
+        <ul class="nav-links">
+          <li class="nav-link">
+            <a href="#">Register</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Sign in</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">About</a>
+          </li>
+          <li class="nav-link">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="socials">
+          <i class="fa-brands fa-instagram fa-lg"></i>
+          <i class="fa-brands fa-x-twitter fa-lg"></i>
+          <i class="fa-brands fa-facebook fa-lg"></i>
+        </div>
 
-    <div class="d-flex flex-column justify-content-center align-items-center gap-3">
-        <div class="d-flex justify-content-start align-items-center">
-            <h1>Welcome to Todo App</h1>
+        <div class="menu-button">
+          <i class="fa-solid fa-bars fa-lg"></i>
+          <i class="fa-solid fa-xmark fa-lg hide"></i>
         </div>
-        <div class="d-flex justify-content-start align-items-center gap-4 w-100">
-            <a href="#" class="btn btn-lg btn-outline-dark text-decoration-none">Login <i
-                    class="fa-solid fa-arrow-right-to-bracket"></i></a>
-            <a href="#" class="btn btn-lg btn-outline-primary text-decoration-none">SIgn up <i
-                    class="fa-solid fa-user-plus"></i></a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-text">
+          <h1 class="hero-title">
+            <span class="title-1"><span>One</span> work</span>
+            <span class="title-2">Should not suck</span>
+          </h1>
+          <p class="text-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Consequuntur tempora quaerat tenetur voluptates iusto temporibus
+            nulla, asperiores ducimus, natus pariatur cum. Tempora placeat
+            incidunt quos sed earum.
+          </p>
+          <div class="btn-container">
+            <a class="cta-btn">Register</a>
+            <a class="cta-btn light">Login</a>
+          </div>
+          <div class="more-container">
+            <a class="arrow-container" href="#business-section">
+              <i class="fa-solid fa-arrow-down" style="color: #938e8e"></i>
+            </a>
+            <p>Swipe down to explore more.</p>
+          </div>
         </div>
-    </div>
-</section>
-{% endblock %}
+        <img
+          class="hero-image"
+          src="https://plus.unsplash.com/premium_vector-1731484096867-ac20c370df2c?q=80&w=484&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        />
+      </section>
+      <section class="one-section">
+        <h2 class="one-header">One</h2>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1720287601920-ee8c503af775?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          class="one-image"
+        />
+      </section>
+      <section class="business-section" id="business-section">
+        <div class="business-text">
+          <h2 class="business-header">For Business</h2>
+          <p class="text-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+            dolorem molestias error veniam similique rerum ipsam dolor,
+            accusamus rem enim. Iste beatae sit, ullam voluptate quas id
+            perspiciatis officia culpa.
+          </p>
+          <a href="#" class="cta-btn">Get Started</a>
+          <div class="business-features">
+            <div class="feature">
+              <div class="feature-icon">
+                <i class="fa-solid fa-chart-column"></i>
+              </div>
+              <p class="feature-text">Financials</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon sites">
+                <i class="fa-solid fa-tags"></i>
+              </div>
+              <p class="feature-text">Sites</p>
+            </div>
+            <div class="feature">
+              <div class="feature-icon manager">
+                <i class="fa-solid fa-briefcase"></i>
+              </div>
+              <p class="feature-text">Rate Management</p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="assets/images/luky-triohandoko-ugGd6GTRYcQ-unsplash.jpg"
+          class="business-img"
+        />
+      </section>
+      <section class="professional-section">
+        <div class="img-container">
+          <img
+            class="professional-img"
+            src="assets/images/Bill.png"
+            alt=""
+            width="250px"
+          />
+          <img
+            class="professional-img tilted"
+            src="assets/images/Credit score.png"
+            alt=""
+            width="250px"
+          />
+        </div>
+        <div class="business-text">
+          <h1 class="business-header">For Professionals</h1>
+          <p class="text-container">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga,
+            libero. Architecto tenetur corrupti qui aspernatur provident,
+            molestiae, ad magni ab sunt porro in non ducimus sed cupiditate at
+            eaque recusandae?
+          </p>
+          <div class="download-container">
+            <a href="#" class="download-btn"
+              ><i class="fa-brands fa-google-play fa-lg"></i>
+              <div class="download-text">
+                <span class="app">android app on</span>
+                <span class="play">Google Play</span>
+              </div>
+            </a>
+            <a href="#" class="download-btn"
+              ><i class="fa-brands fa-apple fa-2xl"></i> App Store</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="manage-section">
+        <div id="people-1" class="people">
+          <img
+            class="joe"
+            src="assets/images/people/michael-dam-mEZ3PoFGs_k-unsplash.jpg"
+          />
+          <img
+            class="amber"
+            src="assets/images/people/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg"
+          />
+          <img
+            class="kate"
+            src="assets/images/people/rayul-_M6gy9oHgII-unsplash.jpg"
+          />
+        </div>
+        <div class="text-part">
+          <div class="header-container">
+            <h2 class="manage-header">Manage your ones</h2>
+            <h2 class="manage-header">Track your earnings</h2>
+          </div>
+          <p class="manage-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+          <form>
+            <input type="email" class="email" placeholder="enter your email" />
+            <button type="submit" role="button" class="email-btn">
+              Get Started
+            </button>
+          </form>
+        </div>
+        <div id="people-2" class="people">
+          <img
+            class="fred"
+            src="assets/images/people/aiony-haust-3TLl_97HNJo-unsplash.jpg"
+          />
+          <img
+            class="amber"
+            src="assets/images/people/ian-dooley-d1UPkiFd04A-unsplash.jpg"
+          />
+          <img
+            class="pete"
+            src="assets/images/people/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"
+          />
+        </div>
+      </section>
+      <section class="dayone-section">
+        <h2 class="business-header">Day One</h2>
+        <p class="text-container">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
+          voluptatibus animi quisquam veritatis quas quasi fuga velit ea totam,
+        </p>
+        <div>
+          <a href="#">Business</a>
+          <a href="#">Professional</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p class="text-container">&copy;2022</p>
+      <div class="footer-socials">
+        <a href="#">Follow us</a>
+        <i class="fa-brands fa-youtube fa-lg"></i>
+        <i class="fa-brands fa-threads fa-lg"></i>
+        <i class="fa-brands fa-facebook fa-lg"></i>
+      </div>
+    </footer>
+  </body>
+</html>
