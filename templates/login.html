@@ -1,1 +1,40 @@
 {% extends 'base.html'%}
+{% block content %}
+<div class="card">
+    <h1 class="card-header">Login </h1>
+    <form class="form" method="post" action="{{url_for('login')}}" novalidate>
+        <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" class="form-input">
+            {% with messages = get_flashed_messages(category_filter=['Invalid email']) %}
+            {% if messages %}
+            <div class="error-msg">
+                <ul style="list-style:none; text-align: center;">
+                    {%- for msg in messages %}
+                    <li>{{ msg }}</li>
+                    {% endfor -%}
+                </ul>
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+        <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-input" name="password">
+            {% with messages = get_flashed_messages(category_filter=['Invalid password']) %}
+            {% if messages %}
+            <div class="error-msg">
+                <ul style="list-style:none; text-align: center;">
+                    {%- for msg in messages %}
+                    <li>{{ msg }}</li>
+                    {% endfor -%}
+                </ul>
+            </div>
+            {% endif %}
+            {% endwith %}
+        </div>
+
+        <button type="submit" role="button" class="form-submit"> Login</button>
+    </form>
+</div>
+{% endblock %}
