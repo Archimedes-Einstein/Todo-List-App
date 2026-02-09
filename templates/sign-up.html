@@ -13,7 +13,7 @@
     </div>
     {% endif %}
     {% endwith %}
-    <form class="form" action="{{url_for('sign_up')}}" method="post">
+    <form class="form" action="{{url_for('sign_up')}}" method="post" novalidate>
         <div class="form-group">
             <label for="name" class="form-label">Name</label>
             <input type="text" id="name" name="name" class="form-input">

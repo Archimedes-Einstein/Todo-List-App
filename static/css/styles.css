@@ -448,39 +448,47 @@ footer a {
 .task{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     justify-content: center;
     gap: 0.5rem;
     align-items: center;
     box-shadow: 2px 5px 7px #ACBFA4;
     border-radius: 5px;
 }
-.task-divider{
-    width: 100%;
-    height: 2px;
-    background-color:#ACBFA4;
+
+.task-img{
+    width: 150px;
+    height: 100px;
+    border-radius: 5px 5px 0 0;
 }
-@media (max-width: 1063px) {
-  .professional-section,
-  .business-section,
-  .one-section {
-    flex-direction: column-reverse;
+.task-title{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.task-duration{
+    font-size: 0.8rem;
+}
+.task-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    padding-bottom: 1rem;
+}
+.task-control{
+    display: flex;
+    justify-content: start;
     align-items: start;
-    width: 98%;
-    padding: 1rem;
-  }
-  .tilted {
-    transform: rotate(0);
-  }
-  .manage-section,
-  .dayone-section {
-    width: 98%;
-    padding: 1rem;
-  }
-  .text-container {
-    width: 95%;
+    gap: 0.4rem;
+}
+.add-todo{
+    display: inline-grid;
+    place-content: center;
+    width: 25px;
+    padding: 0.2rem;
     text-align: center;
-  }
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 .card{
     margin: 3rem 5rem;
@@ -529,7 +537,47 @@ footer a {
     font-weight: 500;
     border: none;
 }
-
+.add-todo-hero-section{
+    width: 100%;
+    height: 55vh;
+    background-image: url('https://plus.unsplash.com/premium_vector-1732660552503-80f0bd206ac1?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-todo-title{
+    font-family: 'Poppins',sans-serif;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+.purple{
+    color: #6b38e0;
+}
+@media (max-width: 1063px) {
+  .professional-section,
+  .business-section,
+  .one-section {
+    flex-direction: column-reverse;
+    align-items: start;
+    width: 98%;
+    padding: 1rem;
+  }
+  .tilted {
+    transform: rotate(0);
+  }
+  .manage-section,
+  .dayone-section {
+    width: 98%;
+    padding: 1rem;
+  }
+  .text-container {
+    width: 95%;
+    text-align: center;
+  }
+}
 
 @media (max-width: 1020px) {
   .hero-section {

@@ -6,34 +6,53 @@
             {{current_user.name}}'s Todos
         </h1>
         <p class="text-body">
-            I'm Archimedes Einstein and these are my essential todos.
+            I'm {{current_user.name}} and these are my essential todos.
         </p>
     </div>
     <img
             class="hero-image"
-            src="https://plus.unsplash.com/premium_vector-1726318627392-68d857451f77?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://plus.unsplash.com/premium_vector-1723274509346-262904252101?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     />
 </section>
 <section class="completed-section">
     <h1 class="completed-header">Completed Tasks</h1>
     <div class="completed-tasks">
         <div class="task">
-            <i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>
-            <p class="task-title">Studying Anatomy</p>
-            <div class="task-divider"></div>
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Biochemistry </p>
             <p class="task-duration">5mins</p>
         </div>
         <div class="task">
-            <i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>
-            <p class="task-title">Studying Physiology
-            </p>
-            <div class="task-divider"></div>
+            <img src="https://plus.unsplash.com/premium_vector-1731673632476-b8498b82ce27?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Physiology </p>
+            <p class="task-duration">5mins</p>
+        </div>
+
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_vector-1682310744479-009b236b1958?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
             <p class="task-duration">5mins</p>
         </div>
         <div class="task">
-            <i class="fa-regular fa-circle-check fa-xl" style="color: #63E6BE;"></i>
-            <p class="task-title">Studying Biochemistry</p>
-            <div class="task-divider"></div>
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <p class="task-duration">5mins</p>
+        </div>
+
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <p class="task-duration">5mins</p>
+        </div>
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
             <p class="task-duration">5mins</p>
         </div>
     </div>
@@ -42,23 +61,90 @@
     <h1 class="completed-header">Current Tasks</h1>
     <div class="completed-tasks">
         <div class="task">
-            <i class="fa-regular fa-clock fa-xl" style="color: #74C0FC;"></i>
-            <p class="task-title">Studying Anatomy</p>
-            <div class="task-divider"></div>
-            <p class="task-duration">5mins</p>
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
         </div>
         <div class="task">
-            <i class="fa-regular fa-clock fa-xl" style="color: #74C0FC;"></i>
-            <p class="task-title">Studying Physiology</p>
-            <div class="task-divider"></div>
-            <p class="task-duration">5mins</p>
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
         </div>
         <div class="task">
-            <i class="fa-regular fa-clock fa-xl" style="color: #74C0FC;"></i>
-            <p class="task-title">Studying Biochemistry</p>
-            <div class="task-divider"></div>
-            <p class="task-duration">5mins</p>
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
+        </div>
+        <div class="task">
+            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="task-img">
+            <p class="task-title">Studying Anatomy </p>
+            <div class="task-container">
+                <p class="task-duration">5mins</p>
+                <div class="task-control">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i class="fa-solid fa-trash-can"></i>
+                </div>
+            </div>
         </div>
     </div>
+</section>
+<section class="completed-section">
+    <h2 class="completed-header">Add Tasks</h2>
+    <a class="cta-btn light" href="{{url_for('add_todo')}}"><span class="add-todo">+</span> Add</a>
+
 </section>
 {% endblock %}
