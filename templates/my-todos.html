@@ -15,72 +15,39 @@
     />
 </section>
 <section class="completed-section">
-    <h1 class="completed-header">Completed Tasks</h1>
+    <h2 class="completed-header">Completed Tasks</h2>
+    {% if current_user.completed_todo.todos %}
     <div class="completed-tasks">
+        {% for todo in current_user.completed_todo.todos %}
         <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            <img src="{{todo.img_url}}"
                  class="task-img">
-            <p class="task-title">Studying Biochemistry </p>
-            <p class="task-duration">5mins</p>
+            <p class="task-title">{{todo.title}}</p>
+            <p class="task-duration">{{todo.task_duration}}</p>
         </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_vector-1731673632476-b8498b82ce27?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Physiology </p>
-            <p class="task-duration">5mins</p>
-        </div>
-
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_vector-1682310744479-009b236b1958?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <p class="task-duration">5mins</p>
-        </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <p class="task-duration">5mins</p>
-        </div>
-
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <p class="task-duration">5mins</p>
-        </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <p class="task-duration">5mins</p>
-        </div>
+        {% endfor %}
     </div>
+    {% else %}
+    <div class="empty-todo">
+        <div class="empty-container">
+            <img src="https://plus.unsplash.com/premium_photo-1677397576132-5d7412825d0e?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="empty-img">
+        </div>
+        <h3>No task completed</h3>
+     </div>
+    {% endif %}
 </section>
 <section class="completed-section">
-    <h1 class="completed-header">Current Tasks</h1>
+    <h2 class="completed-header">Current Tasks</h2>
+    {% if current_user.current_task %}
     <div class="completed-tasks">
+        {% for todo in current_user.current_task %}
         <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            <img src="{{todo.todos.img}}"
                  class="task-img">
-            <p class="task-title">Studying Anatomy </p>
+            <p class="task-title">{{todo.todos.title}} </p>
             <div class="task-container">
-                <p class="task-duration">5mins</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <div class="task-container">
-                <p class="task-duration">5mins</p>
+                <p class="task-duration">{{todo.todos.time}}</p>
                 <div class="task-control">
                     <i class="fa-solid fa-circle-check"></i>
                     <i class="fa-solid fa-pen-to-square"></i>
@@ -88,59 +55,18 @@
                 </div>
             </div>
         </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <div class="task-container">
-                <p class="task-duration">5mins</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-        </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <div class="task-container">
-                <p class="task-duration">5mins</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-        </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <div class="task-container">
-                <p class="task-duration">5mins</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-        </div>
-        <div class="task">
-            <img src="https://plus.unsplash.com/premium_photo-1681487546184-98bd8bacc20a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                 class="task-img">
-            <p class="task-title">Studying Anatomy </p>
-            <div class="task-container">
-                <p class="task-duration">5mins</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
+    {% else %}
+    <div class="empty-todo">
+        <div class="empty-container">
+            <img src="https://plus.unsplash.com/premium_photo-1677397576132-5d7412825d0e?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                 class="empty-img">
+        </div>
+        <h3>No current task</h3>
+    </div>
+    {% endif %}
+
 </section>
 <section class="completed-section">
     <h2 class="completed-header">Add Tasks</h2>

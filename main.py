@@ -154,12 +154,24 @@ def sign_up():
 @app.route('/my-todos')
 @login_required
 def todos():
-    return render_template('my-todos.html')
+    all_todos = Todo.query.all()
+    return render_template('my-todos.html',all_todos=all_todos)
 
 @app.route('/add-todo',methods=['POST','GET'])
 @login_required
 def add_todo():
     form = AddTasksForm()
+    title = form.title.data
+    img_url = form.img_url.data
+    description = form.description.data
+    duration = form.task_duration.data
+    if request.method == 'POST':
+        new_todo = Todo(title=title,img=img_url,description=description,time=duration,user=current_user)
+        new_current_todo = CurrentTodo(user=current_user,todos=new_todo)
+        with app.app_context():
+            db.session.add(new_todo,new_current_todo)
+            db.session.commit()
+        return redirect(url_for('todos'))
     return render_template('add-todo.html',form=form)
 @app.route('/todo/<int:todo_id>')
 @login_required
