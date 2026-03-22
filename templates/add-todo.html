@@ -4,7 +4,9 @@
     <h1 class="add-todo-title">Add Task</h1>
 </section>
 <div class="card">
-    <h1 class="card-header purple">Day One</h1>
+    <div class="card-header-container">
+        <h1 class="card-header purple">Day One</h1>
+    </div>
     <form class="form" action="{{url_for('add_todo')}}" method="post" novalidate>
         <div class="form-group">
             {{ form.title.label(class_= 'form-label') }}

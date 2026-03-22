@@ -459,10 +459,12 @@ footer a {
     width: 150px;
     height: 100px;
     border-radius: 5px 5px 0 0;
+    object-fit: cover;
 }
 .task-title{
     font-size: 0.9rem;
     font-weight: 500;
+    text-align: center;
 }
 .task-duration{
     font-size: 0.8rem;
@@ -477,8 +479,29 @@ footer a {
 .task-control{
     display: flex;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     gap: 0.4rem;
+}
+.task-control a{
+    text-decoration: none;
+    color: black;
+}
+.delete-icon{
+    color: black;
+    transition: all 0.5s ease-in;
+}
+.delete-icon:hover{
+    color: red;
+}
+.edit-icon,.checked-icon{
+    color: black;
+    transition: all 0.5s ease-in;
+}
+.checked-icon:hover{
+    color: green;
+}
+.edit-icon:hover{
+    color: blue;
 }
 .add-todo{
     display: inline-grid;
@@ -539,7 +562,7 @@ footer a {
 }
 .add-todo-hero-section{
     width: 100%;
-    height: 55vh;
+    height: 60vh;
     background-image: url('https://plus.unsplash.com/premium_vector-1732660552503-80f0bd206ac1?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-repeat: no-repeat;
     background-position: center;
@@ -550,11 +573,23 @@ footer a {
 }
 .add-todo-title{
     font-family: 'Poppins',sans-serif;
-    font-size: 2.8rem;
+    font-size: 4.5rem;
     text-transform: uppercase;
 }
 .purple{
     color: #6b38e0;
+    font-size: 2em;
+}
+.card-header-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 50%;
+    background-color: #eeeaff;
 }
 .empty-todo{
     width: 100%;
@@ -578,6 +613,21 @@ footer a {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+}
+.todo-link{
+    color: black;
+    text-decoration: none;
+}
+.about-hero-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.8rem;
+}
+.flash-box{
+    position: absolute;
+    top: 50%;
+    left: 50%-
 }
 @media (max-width: 1063px) {
   .professional-section,

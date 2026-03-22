@@ -16,14 +16,14 @@
 </section>
 <section class="completed-section">
     <h2 class="completed-header">Completed Tasks</h2>
-    {% if current_user.completed_todo.todos %}
+    {% if current_user.completed_todo %}
     <div class="completed-tasks">
-        {% for todo in current_user.completed_todo.todos %}
+        {% for todo in current_user.completed_todo %}
         <div class="task">
-            <img src="{{todo.img_url}}"
+            <img src="{{todo.todos.img}}"
                  class="task-img">
-            <p class="task-title">{{todo.title}}</p>
-            <p class="task-duration">{{todo.task_duration}}</p>
+            <p class="task-title">{{todo.todos.title}}</p>
+            <p class="task-duration">{{todo.todos.task_duration}}</p>
         </div>
         {% endfor %}
     </div>
@@ -34,7 +34,7 @@
                  class="empty-img">
         </div>
         <h3>No task completed</h3>
-     </div>
+    </div>
     {% endif %}
 </section>
 <section class="completed-section">
@@ -42,20 +42,27 @@
     {% if current_user.current_task %}
     <div class="completed-tasks">
         {% for todo in current_user.current_task %}
-        <div class="task">
-            <img src="{{todo.todos.img}}"
-                 class="task-img">
-            <p class="task-title">{{todo.todos.title}} </p>
-            <div class="task-container">
-                <p class="task-duration">{{todo.todos.time}}</p>
-                <div class="task-control">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <i class="fa-solid fa-pen-to-square"></i>
-                    <i class="fa-solid fa-trash-can"></i>
+        <a class="todo-link" href="{{url_for('todo',todo_id=todo.todos.id)}}">
+            <div class="task">
+                <img src="{{ todo.todos.img }}"
+                     class="task-img">
+                <p class="task-title">{{todo.todos.title}} </p>
+                <div class="task-container">
+                    <p class="task-duration">{{todo.todos.time}}</p>
+                    <div class="task-control">
+                        <a class="checked" href="{{url_for('completed_todo',todo_id=todo.todos.id)}}">
+                            <i class="fa-solid fa-circle-check checked-icon"></i>
+                        </a>
+                        <a class="edit" href="{{url_for('edit',todo_id=todo.todos.id)}}">
+                            <i class="fa-solid fa-pen-to-square edit-icon"></i></a>
+                        <a class="delete" href="{{url_for('delete',todo_id=todo.todos.id)}}">
+                            <i class="fa-solid fa-trash-can delete-icon"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        {% endfor %}
+        </a>
+            {% endfor %}
     </div>
     {% else %}
     <div class="empty-todo">
@@ -73,4 +80,8 @@
     <a class="cta-btn light" href="{{url_for('add_todo')}}"><span class="add-todo">+</span> Add</a>
 
 </section>
+<div class="flash-box">
+    <p class="flash-title">Success</p>
+    <p>The login was successful</p>
+</div>
 {% endblock %}

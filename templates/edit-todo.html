@@ -1,10 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
+<section class="add-todo-hero-section" >
+    <h1 class="add-todo-title">Edit Task</h1>
+</section>
+<div class="card">
+    <div class="card-header-container">
+        <h1 class="card-header purple">Day One</h1>
+    </div>
+    <form class="form" action="{{url_for('edit',todo_id=todo_id)}}" method="post" novalidate>
+        <div class="form-group">
+            {{ form.title.label(class_= 'form-label') }}
+            {{ form.title(class_='form-input')}}
+        </div>
+        <div class="form-group">
+            {{ form.img_url.label(class_= 'form-label') }}
+            {{ form.img_url(class_='form-input')}}
+        </div>
+        <div class="form-group">
+            {{ form.task_duration.label(class_= 'form-label') }}
+            {{ form.task_duration(class_= 'form-input')}}
+        </div>
+        <div class="form-group">
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='description',versionCheck=False)}}
+            {{ form.description.label(class_='form-label') }}
+            {{ form.description(class_='form-input')}}
+        </div>
+        {{ form.submit(class_= 'form-submit')}}
+    </form>
+</div>
 
-</body>
-</html>
+{% endblock %}
